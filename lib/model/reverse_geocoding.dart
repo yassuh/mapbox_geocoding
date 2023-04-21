@@ -109,7 +109,7 @@ class Features {
         context!.add(Context.fromJson(v));
       });
     }
-    bbox = json['bbox'].cast<double>();
+    bbox = json['bbox'] != null ? json['bbox'].cast<double>() : json['bbox'];
   }
 
   Map<String, dynamic> toJson() {
